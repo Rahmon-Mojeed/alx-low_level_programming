@@ -13,5 +13,6 @@ char ch;
 {
 	putchar(ch);
 }
+	putchar("\n")
 	return (0);
 }
