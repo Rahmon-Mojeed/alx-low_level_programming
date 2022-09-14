@@ -18,9 +18,9 @@ long fib;
 			printf("%ld, ", fib);
 		else
 			printf("%ld\n", fib);
-			i = j;
-			j = fib;
-			n += 1;
+		i = j;
+		j = fib;
+		n += 1;
 	}
 	return (0);
 }
