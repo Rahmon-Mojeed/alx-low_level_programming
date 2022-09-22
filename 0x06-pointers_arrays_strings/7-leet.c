@@ -18,10 +18,10 @@ char *leet(char *s)
 		{
 			if (*(s + i) == *(l + j))
 				*(s + i)  = *(n + j);
-				j++;
+			j++;
 		}
 		j = 0;
 		i++;
 	}
-	return (s);
+return (s);
 }
