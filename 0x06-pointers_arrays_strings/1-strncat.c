@@ -2,6 +2,7 @@
 
 /**
  * _strncat- function that concatenates two strings.
+ *
  * @dest: pointer to destination char
  * @src: pointer to source char
  * @n: number of bytes to receive
@@ -15,13 +16,13 @@ int j = 0;
 while (*(dest + i) != '\0')
 	i++;
 while (*(src + j) != '\0')
+{
+	if (j < n)
 	{
-		if (j < n)
-		{
-			*(dest + i) = *(src + j);
-			i++;
-		}
-		j++;
+		*(dest + i) = *(src + j);
+		i++;
 	}
-	return (dest);
+	j++;
+}
+return (dest);
 }
