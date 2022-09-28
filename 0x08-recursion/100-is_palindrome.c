@@ -38,9 +38,9 @@ int get_pal(char *s, int len)
 
 int is_palindrome(char *s)
 {
-	int len;
-	len = _strlen_recursion(s);
-	if (len <= 1)
-		return (1);
-	return (get_pal(s, len));
+int len;
+len = _strlen_recursion(s);
+if (len <= 1)
+	return (1);
+return (get_pal(s, len));
 }
