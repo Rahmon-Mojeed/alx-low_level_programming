@@ -15,7 +15,7 @@ i = j = x = 0;
 if (width <= 0 || height <= 0)
 	return (NULL);
 /* using typecasting (int *) to dereference values */
-arr = malloc(height *sizeof(int *));
+arr = malloc(height *sizeof(int* ));
 if (arr == NULL)
 	return (NULL);
 for (i = 0; i < height; i++)
