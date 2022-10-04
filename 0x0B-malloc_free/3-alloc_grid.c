@@ -20,7 +20,7 @@ if (arr == NULL)
 	return (NULL);
 for (i = 0; i < height; i++)
 {
-	arr[i] = malloc(width * sizeof(int));
+	arr[i] = malloc(width *sizeof(int));
 	if (arr[i] == NULL)
 	{
 		for (f = 0; f < i; f++)
