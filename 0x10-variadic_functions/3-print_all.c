@@ -11,7 +11,7 @@
 
 void print_i(va_list list, char *s)
 {
-	printf("%s%d", s, va_arg(list, int));
+printf("%s%d", s, va_arg(list, int));
 }
 
 /**
@@ -22,7 +22,7 @@ void print_i(va_list list, char *s)
 
 void print_c(va_list list, char *sep)
 {
-	printf("%s%c", sep, va_arg(list, int));
+printf("%s%c", sep, va_arg(list, int));
 }
 
 /**
@@ -61,33 +61,33 @@ void print_f(va_list list, char *sep)
 
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	int i, j;
-	char *separator;
-	type_t ops[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"f", print_f},
-		{"s", print_s},
-		{NULL, NULL}
-	};
-	va_start(list, format);
-	i = 0;
-	separator = "";
-	while (format != NULL && format[i] != '\0')
+va_list list;
+int i, j;
+char *separator;
+type_t ops[] = {
+	{"c", print_c},
+	{"i", print_i},
+	{"f", print_f},
+	{"s", print_s},
+	{NULL, NULL}
+};
+va_start(list, format);
+i = 0;
+separator = "";
+while (format != NULL && format[i] != '\0')
+{
+	j = 0;
+	while (j < 4)
 	{
-		j = 0;
-		while (j < 4)
+		if (format[i] == *(ops[j]).op)
 		{
-			if (format[i] == *(ops[j]).op)
-			{
-				ops[j].f(list, separator);
-				separator = ", ";
-			}
-			j++;
+			ops[j].f(list, separator);
+			separator = ", ";
 		}
-		i++;
+		j++;
 	}
-	printf("\n");
-	va_end(list);
+	i++;
+}
+printf("\n");
+va_end(list);
 }
