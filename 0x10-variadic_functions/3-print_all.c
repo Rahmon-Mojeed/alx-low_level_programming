@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *(ops[j])op)
+			if (format[i] == *(ops[j]).op)
 			{
 				ops[j]f(list, separator);
 				separator = ", ";
