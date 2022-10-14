@@ -83,7 +83,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(ops[j]).op)
 			{
-				ops[j]f(list, separator);
+				ops[j].f(list, separator);
 				separator = ", ";
 			}
 			j++;
